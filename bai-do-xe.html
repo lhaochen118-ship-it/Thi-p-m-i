@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#3d0a14">
+<title>Chỗ gửi xe · Lễ tốt nghiệp Nhật Long</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,600;0,700;1,500&family=Great+Vibes&display=swap">
+<style>
+/* Layout: danh sách dọc các thẻ giấy ngà trên nền đỏ đô, cùng hệ màu với thiệp mời. */
+:root{
+  --wine:#7e1628;
+  --wine-deep:#4d0c19;
+  --wine-ink:#2c0710;
+  --tassel:#d9a43a;
+  --tassel-hi:#f6d98c;
+  --paper:#fbf7f0;
+  --paper-2:#efe3cf;
+  --ink:#2d1b1f;
+  --ink-soft:#6c565a;
+  --on-wine:#f7ede4;
+  --on-wine-soft:#d9bfc2;
+  --line:rgba(217,164,58,.42);
+  --f-script:"Great Vibes","Snell Roundhand","Segoe Script",cursive;
+  --f-serif:"Cormorant Garamond","Playfair Display",Georgia,"Times New Roman",serif;
+  --f-sans:"Be Vietnam Pro",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  color-scheme:dark;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+body{
+  margin:0;font-family:var(--f-sans);font-size:15px;line-height:1.6;font-variant-numeric:lining-nums;color:var(--on-wine);
+  background-color:var(--wine-ink);
+  background-image:
+    radial-gradient(120% 50% at 50% 0%, rgba(126,22,40,.95), rgba(126,22,40,0) 70%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140' viewBox='0 0 140 140'%3E%3Cg fill='none' stroke='%23d9a43a' stroke-opacity='.07' stroke-width='1'%3E%3Cellipse cx='70' cy='70' rx='30' ry='11'/%3E%3Cellipse cx='70' cy='70' rx='30' ry='11' transform='rotate(60 70 70)'/%3E%3Cellipse cx='70' cy='70' rx='30' ry='11' transform='rotate(-60 70 70)'/%3E%3C/g%3E%3C/svg%3E");
+}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--tassel-hi);outline-offset:3px;border-radius:4px}
+.wrap{
+  max-width:560px;margin-inline:auto;
+  padding-block:18px 48px;
+  padding-left:max(16px,env(safe-area-inset-left,0px));
+  padding-right:max(16px,env(safe-area-inset-right,0px));
+  display:grid;gap:22px;
+}
+.back{
+  justify-self:start;display:inline-flex;align-items:center;gap:8px;min-height:40px;
+  font-size:14px;font-weight:500;text-decoration:none;color:var(--on-wine-soft);
+}
+.back svg{width:18px;height:18px}
+.back:hover{color:var(--tassel-hi)}
+.head{display:grid;gap:6px;text-align:center;justify-items:center;padding-block:6px 4px}
+.badge{width:64px;height:64px;border-radius:16px;display:grid;place-items:center;background:var(--paper);color:var(--wine);font:700 36px/1 var(--f-serif);box-shadow:0 0 0 1px var(--line),0 0 0 6px rgba(217,164,58,.12)}
+.eyebrow{margin:10px 0 0;font-size:11px;font-weight:600;letter-spacing:.32em;text-transform:uppercase;color:var(--tassel-hi);padding-left:.32em}
+h1{margin:0;font:700 40px/1.1 var(--f-serif);color:var(--on-wine);text-wrap:balance}
+.sub{margin:0;color:var(--on-wine-soft);max-width:36ch;text-wrap:balance}
+
+.list{list-style:none;margin:0;padding:0;display:grid;gap:14px}
+.lot{
+  position:relative;display:grid;grid-template-columns:auto minmax(0,1fr);gap:4px 14px;
+  padding:18px 18px 18px 16px;border-radius:10px;
+  background:var(--paper);color:var(--ink);
+  box-shadow:0 20px 40px -26px rgba(0,0,0,.8);
+}
+.lot .num{grid-row:1 / span 4;width:46px;height:46px;border-radius:10px;display:grid;place-items:center;background:var(--wine);color:var(--paper);font:700 19px/1 var(--f-serif);letter-spacing:.02em}
+.lot h2{margin:2px 0 0;font:700 23px/1.2 var(--f-serif);color:var(--wine);overflow-wrap:anywhere}
+.lot .where{margin:0;display:flex;gap:6px;align-items:flex-start;color:var(--ink-soft);font-size:14px;line-height:1.5}
+.lot .where svg{width:16px;height:16px;flex:none;margin-top:3px;color:var(--wine)}
+.lot .where.tbd{font-style:italic}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:4px}
+.chip{font-size:12px;font-weight:500;padding:3px 10px;border-radius:999px;background:var(--paper-2);color:var(--ink)}
+.lot .note{margin:2px 0 0;font-size:14px;color:var(--ink)}
+.lot .go{
+  grid-column:1 / -1;margin-top:12px;
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;
+  border-radius:999px;text-decoration:none;font-weight:500;font-size:14px;
+  background:var(--wine);color:var(--paper);transition:background-color .2s ease;
+}
+.lot .go:hover{background:var(--wine-deep)}
+.lot .go svg{width:16px;height:16px}
+.lot .ask{grid-column:1 / -1;margin:10px 0 0;font-size:13px;color:var(--ink-soft)}
+.lot .ask a{color:var(--wine);font-weight:600}
+
+.dest{
+  position:relative;padding:22px 20px;text-align:center;display:grid;gap:6px;justify-items:center;
+}
+.dest::before,.dest::after{content:"";position:absolute;pointer-events:none;border:1px solid var(--line)}
+.dest::before{inset:0}.dest::after{inset:6px;border-color:rgba(217,164,58,.2)}
+.dest .lbl{margin:0;font-size:11px;font-weight:600;letter-spacing:.32em;text-transform:uppercase;color:var(--tassel-hi);padding-left:.32em}
+.dest .venue{margin:0;font:700 28px/1.15 var(--f-serif)}
+.dest .addr{margin:0;color:var(--on-wine-soft);max-width:34ch}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:10px 20px;margin-top:8px;
+  border-radius:999px;font:500 14px/1.2 var(--f-sans);text-decoration:none;
+  color:var(--tassel-hi);border:1px solid var(--line);transition:background-color .2s ease,border-color .2s ease;
+}
+.btn:hover{background:rgba(246,217,140,.1);border-color:var(--tassel-hi)}
+.btn svg{width:16px;height:16px}
+.sig{margin:6px 0 0;text-align:center;font:400 34px/1 var(--f-script);color:var(--on-wine-soft)}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="back" id="back" href="index.html">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
+    Về thiệp mời
+  </a>
+
+  <header class="head">
+    <span class="badge" aria-hidden="true">P</span>
+    <p class="eyebrow">Xem chỗ gửi xe</p>
+    <h1 id="title">4 bãi đỗ xe quanh trường</h1>
+    <p class="sub" id="sub">Gần Giảng đường 1, Trường Đại học Khoa học Tự nhiên – Cơ sở 1</p>
+  </header>
+
+  <ol class="list" id="list" aria-label="Danh sách bãi đỗ xe"></ol>
+
+  <section class="dest" aria-labelledby="dest-venue">
+    <p class="lbl">Điểm đến</p>
+    <p class="venue" id="dest-venue">Giảng đường 1</p>
+    <p class="addr" id="dest-addr">Trường Đại học Khoa học Tự nhiên – Cơ sở 1 · 227 Nguyễn Văn Cừ, Phường Chợ Quán, TP.HCM</p>
+    <a class="btn" id="dest-map" href="https://maps.app.goo.gl/XkD8krvVbiMBUw3J6" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+      Mở vị trí trường trên Google Maps
+    </a>
+  </section>
+  <p class="sig" id="sig">Nhật Long</p>
+</div>
+
+<script src="config.js"></script>
+<script>
+(function () {
+  "use strict";
+  var C = window.THIEP || {}, E = C.event || {}, G = C.graduate || {};
+  var $ = function (id) { return document.getElementById(id); };
+  var esc = function (s) { return String(s).replace(/[&<>"']/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; }); };
+  var pin = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>';
+  var arrow = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>';
+  var dirUrl = function (q) { return "https://www.google.com/maps/dir/?api=1&destination=" + encodeURIComponent(q); };
+
+  var lots = C.parking || [];
+  if (lots.length) $("title").textContent = lots.length + " bãi đỗ xe quanh trường";
+  if (E.venue && E.campus) $("sub").textContent = "Gần " + E.venue + ", " + E.campus;
+  if (E.venue) $("dest-venue").textContent = E.venue;
+  $("dest-addr").textContent = [E.campus, E.address].filter(Boolean).join(" · ");
+  if (E.mapUrl) $("dest-map").href = E.mapUrl;
+  if (G.name) $("sig").textContent = G.name;
+
+  var phone = (G.phone || "").replace(/\D/g, "");
+  var pretty = phone.length === 10 ? phone.replace(/(\d{4})(\d{3})(\d{3})/, "$1 $2 $3") : phone;
+
+  var html = "";
+  lots.forEach(function (lot, i) {
+    var url = lot.mapUrl || (lot.mapQuery ? dirUrl(lot.mapQuery) : "");
+    html += '<li class="lot">';
+    html += '<span class="num" aria-hidden="true">P' + (i + 1) + '</span>';
+    html += '<h2>' + esc(lot.name) + '</h2>';
+    html += lot.where
+      ? '<p class="where">' + pin + '<span>' + esc(lot.where) + '</span></p>'
+      : '<p class="where tbd">' + pin + '<span>Địa chỉ đang được cập nhật</span></p>';
+    if (lot.vehicles && lot.vehicles.length) {
+      html += '<div class="chips">' + lot.vehicles.map(function (v) { return '<span class="chip">' + esc(v) + '</span>'; }).join("") + '</div>';
+    }
+    if (lot.note) html += '<p class="note">' + esc(lot.note) + '</p>';
+    if (url) {
+      html += '<a class="go" href="' + esc(url) + '" target="_blank" rel="noopener">Chỉ đường trên Google Maps ' + arrow + '</a>';
+    } else if (phone) {
+      html += '<p class="ask">Cần chỉ đường tới bãi này? Gọi hoặc nhắn Long: <a href="tel:+84' + phone.replace(/^0/, "") + '">' + pretty + '</a></p>';
+    }
+    html += '</li>';
+  });
+  $("list").innerHTML = html;
+
+  // Giữ tên khách khi quay lại thiệp; dùng lịch sử nếu vừa đi từ thiệp sang
+  var to = new URLSearchParams(location.search).get("to");
+  var back = $("back");
+  if (to) back.href = "index.html?to=" + encodeURIComponent(to);
+  back.addEventListener("click", function (e) {
+    try {
+      if (document.referrer && new URL(document.referrer).origin === location.origin && history.length > 1) { e.preventDefault(); history.back(); }
+    } catch (err) {}
+  });
+})();
+</script>
+</body>
+</html>
